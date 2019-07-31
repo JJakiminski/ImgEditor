@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import filedialog
 from tkinter.filedialog import askopenfilename
 from tkinter.messagebox import showerror
 import PIL
@@ -26,7 +27,7 @@ def display():
     for widget in lower_frame.winfo_children():
         widget.destroy()
     canvas = tk.Canvas(lower_frame, bg="yellow")
-    canvas.pack(expand = YES, fill = BOTH)
+    canvas.pack(expand = 1, fill = tk.BOTH)
     img = Image.open(file_path)
     canvas.image = ImageTk.PhotoImage(img)
     canvas.create_image(0,0, image = canvas.image, anchor = "n")
@@ -35,7 +36,7 @@ def blacknwhite():
     for widget in lower_frame.winfo_children():
         widget.destroy()
     canvas = tk.Canvas(lower_frame, bg="yellow")
-    canvas.pack(expand = YES, fill = BOTH)
+    canvas.pack(expand = 1, fill = tk.BOTH)
     img = Image.open(file_path)
     bnw = img.convert('L')
     canvas.image = ImageTk.PhotoImage(bnw)
