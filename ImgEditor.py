@@ -30,7 +30,7 @@ def display():
     canvas.pack(expand = 1, fill = tk.BOTH)
     img = Image.open(file_path)
     canvas.image = ImageTk.PhotoImage(img)
-    canvas.create_image(0,0, image = canvas.image, anchor = "n")
+    canvas.create_image(0,0, image = canvas.image, anchor = "nw")
     
 def blacknwhite():
     for widget in lower_frame.winfo_children():
@@ -40,7 +40,7 @@ def blacknwhite():
     img = Image.open(file_path)
     bnw = img.convert('L')
     canvas.image = ImageTk.PhotoImage(bnw)
-    canvas.create_image(0,0, image = canvas.image, anchor = "n")
+    canvas.create_image(0,0, image = canvas.image, anchor = "nw")
 
 root = tk.Tk()
 
