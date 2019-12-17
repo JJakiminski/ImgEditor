@@ -12,7 +12,6 @@ global image
 global file_path
 
 
-
 def get_image():
     global file_path
     file_path = filedialog.askopenfilename()
